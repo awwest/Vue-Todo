@@ -1,7 +1,9 @@
 <div id="app">
   <input type="text" placeholder="Add a task" v-model="newTask">
   <button v-on:click="addTask">ADD</button>
-  <p v-for="(task, index) in tasks">{{index + 1}}. {{ task }}</p>
+  <div v-for="(task, index) in tasks">{{index + 1}}. {{ task }}
+    <button @click="deleteTask(index)">DELETE</button>
+  </div>
 </div>
 
 
