@@ -1,5 +1,5 @@
 <div id="app">
-  <p v-for="task in tasks">{{ task }}</p>
+  <p v-for="(task, index) in tasks">{{index + 1}}. {{ task }}</p>
 </div>
 
 
