@@ -1,9 +1,8 @@
 <div id="app">
   <input type="text" placeholder="Add a task" v-model="newTask">
   <button v-on:click="addTask">ADD</button>
-  <div v-for="(task, index) in tasks">{{index + 1}}. {{ task }}
-    <button @click="deleteTask(index)">DELETE</button>
-  </div>
+  <task-item v-for="(task, index) in tasks" v-bind:task="task" :index="index" v-on:delete="deleteTask(index)" v-bind:key="index">
+  </task-item>
 </div>
 
 

@@ -1,3 +1,7 @@
+Vue.component('task-item', {
+  template: '<div>{{index + 1}}. {{ task }}<button @click="$emit(\'delete\', index)">DELETE</button></div>',
+  props: ['task', 'index']
+})
 
 new Vue({
   el: '#app',
